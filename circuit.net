@@ -1,0 +1,9 @@
+.title 
+V1 N_1 0 DC 0V AC 1V SIN(0.0V 1.0V 1kHz 0s 0Hz)
+A1 [N_1] [N_2] adc
+A2 N_2 N_3 buf
+A3 [N_3] [N_4] dac
+R1 N_4 0 1kOhm
+.model adc adc_bridge (fall_delay=0.001ms in_high=12.0V in_low=0.0V rise_delay=0.001ms)
+.model buf d_buffer (fall_delay=0.001ms input_load=0.001ms rise_delay=0.001ms)
+.model dac dac_bridge (out_high=12.0V out_low=0.0V)
